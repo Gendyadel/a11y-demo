@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><head>
+    <title>Fixed Profile</title>
+    <style>
+      body {
+        font-family: Arial;
+        margin: 0;
+        background: #f5f5f5;
+      }
+
+      /* Header */
+      header {
+        background: #005fcc;
+        padding: 12px 20px;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 24px;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+      }
+
+      nav a:focus {
+        outline: 3px solid #000;
+      }
+
+      /* Layout */
+      main {
+        min-height: calc(100vh - 50px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Card */
+      .card {
+        width: 320px;
+        background: white;
+        padding: 24px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      h1 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
+
+      .field {
+        margin-bottom: 16px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        margin-bottom: 4px;
+      }
+
+      input {
+        padding: 6px;
+      }
+
+      button {
+        background: #005fcc;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:focus {
+        outline: 3px solid #000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Accessible Header -->
+    <header>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#" aria-current="page">Profile</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Accessible Form -->
+    <main>
+      <div class="card">
+        <h1>Edit Profile</h1>
+
+        <form>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" type="text" required />
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" type="tel" />
+          </div>
+
+          <button type="submit">Save</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
