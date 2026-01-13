@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <title>Broken Profile</title>
+    <style>
+      body {
+        font-family: Arial;
+        margin: 0;
+        background: #f5f5f5;
+      }
+
+      /* Header */
+      .header {
+        background: #eaeaea;
+        padding: 12px 20px;
+        display: flex;
+        gap: 24px;
+      }
+
+      .nav-item {
+        color: gray;
+        cursor: pointer;
+      }
+
+      /* Layout */
+      .page {
+        min-height: calc(100vh - 50px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Card */
+      .card {
+        width: 320px;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .title {
+        font-size: 18px;
+        margin-bottom: 16px;
+      }
+
+      .field {
+        margin-bottom: 16px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .btn {
+        background: lightgray;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      input {
+        padding: 6px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Broken Header -->
+    <div class="header">
+      <div class="nav-item" onclick="alert('Home')">Home</div>
+      <div class="nav-item" onclick="alert('Profile')">Profile</div>
+      <div class="nav-item" onclick="alert('Logout')">Logout</div>
+    </div>
+
+    <!-- Broken Form -->
+    <div class="page">
+      <div class="card">
+        <div class="title">Edit Profile</div>
+
+        <div class="field">
+          <div>Name</div>
+          <input type="text" />
+        </div>
+
+        <div class="field">
+          <div>Phone</div>
+          <input type="text" />
+        </div>
+
+        <div class="btn" onclick="alert('Saved')">Save</div>
+      </div>
+    </div>
+  </body>
+</html>
